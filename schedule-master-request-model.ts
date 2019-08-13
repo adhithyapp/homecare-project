@@ -1,0 +1,65 @@
+import { CaregiverRequestModel } from "./caregiver-request-model";
+import { PersonRequestModel } from "./person-request-model";
+import { ClientRequestModel } from "./client-request-model";
+import { PayerRequestModel } from "./payer-request-model";
+import { PlanOfCareRequestModel } from "./plan-of-care-request-model";
+
+export class ScheduleMasterRequestModel {
+    id: number;
+    assignedTasksCSV: string = "";
+    billingCode: number;
+    payerName: string = "";
+    weekdayCSV: string = "";
+    caregiverID: number;
+    caregiver:string;
+    caregiverPersonID: number;
+    caregiverPerson:string;
+    clientID: number;
+    client:string="";
+    clientPersonID: number;
+    clientPerson:string="";
+    payerID: number;
+    planOfCare:string;
+    payer:string;
+    pocID: number;
+    endDate: number;
+    startDate: number;
+    startTime: number;
+    endTime: number;
+    reccurence: string = "";
+    CaregiverRequestModel: CaregiverRequestModel;
+    PersonRequestModel: PersonRequestModel;
+    ClientRequestModel: ClientRequestModel;
+    PayerRequestModel: PayerRequestModel;
+    PlanOfCareRequestModel: PlanOfCareRequestModel;
+    constructor() {
+        this.CaregiverRequestModel = new CaregiverRequestModel();
+        this.PersonRequestModel = new PersonRequestModel();
+        this.ClientRequestModel = new ClientRequestModel();
+        this.PersonRequestModel = new PersonRequestModel();
+        this.PayerRequestModel = new PayerRequestModel();
+        this.PlanOfCareRequestModel = new PlanOfCareRequestModel();
+        this.id;
+        this.planOfCare="";
+        this.payer="";
+        this.caregiver="";
+        this.caregiverPerson="";
+        this.assignedTasksCSV = "";
+        this.billingCode;
+        this.payerName = "";
+        this.weekdayCSV = "";
+        this.caregiverID;
+        this.caregiverPersonID;
+        this.clientID;
+        this.client="";
+        this.clientPersonID;
+        this.clientPerson="";
+        this.payerID;
+        this.pocID;
+        this.endDate;
+        this.startDate;
+        this.startTime;
+        this.endTime;
+        this.reccurence;
+    }
+}
